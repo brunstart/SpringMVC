@@ -21,8 +21,7 @@ public class User {
     private boolean admin;
 
     @NotEmpty(message = "비밀번호를 입력하세요.")
-    @Size()
+    @Size(min = 4, max = 6, message = "비밀번호는 4-6 자 사이만 입력됩니다.")
+//    @Pattern(regexp = ".*[!@#$%^&*(),.?\":{}|<>].*",message = "비밀번호는 최소 하나의 특수문자를 포함해야만 합니다. ")
     private String password;
-
-
 }
