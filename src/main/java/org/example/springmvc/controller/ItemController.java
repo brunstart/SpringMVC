@@ -27,8 +27,8 @@ public class ItemController {
         // System.out.println(name);        // 값을 직접 쓰는경우
         // System.out.println(price);
 
-        return "redirect:/item/form";
-        // return "item_form";  // /item/form 으로 이동하는게 아니라 url은 item/add인 채로 item_form.html을 보여주기만 함
+        // return "redirect:/item/form";
+        return "item_form";  // /item/form 으로 이동하는게 아니라 url은 item/add인 채로 item_form.html을 보여주기만 함
     }
 
     @GetMapping("/list")
