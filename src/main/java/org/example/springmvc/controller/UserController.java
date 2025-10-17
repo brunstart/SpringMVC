@@ -1,5 +1,6 @@
 package org.example.springmvc.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import org.example.springmvc.domain.User;
 import org.example.springmvc.domain.UserForm;
@@ -14,9 +15,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/user")
 public class UserController {
+
+    @GetMapping("/abc")
+    public String abc(HttpServletRequest request) {
+        request.setAttribute("name", "kang");
+        return "forward:/user/register";
+    }
+
+
     // user 정보 입력 폼
     @GetMapping("/register")
-    public String registerForm(Model model) {
+    public String registerForm(Model model, HttpServletRequest request) {
+        System.out.println(request.getAttribute("name"));
         model.addAttribute("user", new User()); // validation할 정보
         return "registerForm";
     }
