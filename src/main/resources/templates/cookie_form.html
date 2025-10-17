@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>쿠키입력폼</title>
+</head>
+<body>
+<h1>쿠키 입력</h1>
+<form action="/addcookie" method="get"> <!--get : url에 정보를 담아서 넘김 / post : body에 정보를 담아서 넘김-->
+    <label for="cookieName">쿠키이름</label>
+    <input id="cookieName" type="text" name="cookieName"><br> <!-- 서버에 값을 전송할 때는 id는 큰 영향 없음, name이 중요함 -->
+    <label for="cookieValue">쿠키값</label>
+    <input id="cookieValue" type="text" name="cookieValue"><br>
+
+    <input type="submit" value="쿠키 저장"/>
+</form>
+</body>
+</html>
