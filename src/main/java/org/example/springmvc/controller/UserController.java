@@ -19,7 +19,7 @@ public class UserController {
     @GetMapping("/abc")
     public String abc(HttpServletRequest request) {
         request.setAttribute("name", "kang");
-        return "forward:/user/register";
+        return "forward:/user/registe";     // 에러 발생용 오타
     }
 
 
