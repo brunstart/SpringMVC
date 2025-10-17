@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>회원 가입 폼</title>
 </head>
 <body>
-<!-- validation하기 위해 필요한 부분 : th:object="${user}" $:model 객체에서 값 꺼내와, *:오브젝트에서 값 꺼내와 -->
+<!-- validation하기 위해 필요한 부분 : th:object="${user}" | $:model 객체에서 값 꺼내와, *:오브젝트에서 값 꺼내와 -->
 <form th:action="@{/user/register}" th:object="${user}" method="post">
     이름 : <input type="text" th:field="*{name}"> <br>
     <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div> <!-- 에러의 기준은 : User.java의 name 필드 위에 어노테이션으로 정함 -->
