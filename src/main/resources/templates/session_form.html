@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>세션입력폼</title>
+</head>
+<body>
+<h1>세션 입력</h1>
+<form action="/session/add" method="get"> <!--get : url에 정보를 담아서 넘김 / post : body에 정보를 담아서 넘김-->
+    <label for="sessionKey">세션키</label>
+    <input id="sessionKey" type="text" name="sessionKey"><br>
+    <label for="sessionValue">세션값</label>
+    <input id="sessionValue" type="text" name="sessionValue"><br>
+
+    <input type="submit" value="세션 저장"/>
+</form>
+</body>
+</html>

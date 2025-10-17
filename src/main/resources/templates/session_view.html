@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>세션목록보기</title>
+</head>
+<body>
+<h1>세션목록보기</h1>
+<ul>
+    <li th:each="entry:${session}">
+        <span th:text="${entry.key}"></span>:::::
+        <span th:text="${entry.value}"></span>
+    </li>
+</ul>
+<br>
+
+<a href="/session/form">세션등록</a>
+</body>
+</html>
