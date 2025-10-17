@@ -74,7 +74,7 @@ public class CookieController {
 
     // 쿠키삭제
     // 브라우저(클라이언트)는 같은 이름의 여러 쿠키를 가질 수 없다. 같은 이름의 쿠키가 전송되어오면 기존 값이 갱신된다.
-    @GetMapping("/cookieDelete")
+    @GetMapping("/cookieDel")
     public String cookieDel(HttpServletResponse response) {
 
         Cookie cookie = new Cookie("admin", "");    // name이 중요, 값은 상관없음
